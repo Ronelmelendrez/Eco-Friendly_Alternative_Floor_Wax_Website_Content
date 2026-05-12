@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Droplet, Apple, Beaker, CheckCircle } from 'lucide-react'
+import { Droplet, Apple, CheckCircle } from 'lucide-react'
 import SectionTitle from '../common/SectionTitle'
 import Card from '../ui/Card'
 import Badge from '../ui/Badge'
