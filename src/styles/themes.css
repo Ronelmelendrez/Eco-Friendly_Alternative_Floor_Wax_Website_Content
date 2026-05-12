@@ -1,0 +1,15 @@
+:root {
+  --background: 37 34 31;
+  --foreground: 31 41 55;
+}
+
+.dark {
+  --background: 17 24 39;
+  --foreground: 243 244 246;
+}
+
+* {
+  transition-property: background-color, border-color, color;
+  transition-duration: 200ms;
+  transition-timing-function: ease;
+}
