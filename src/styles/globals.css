@@ -5,10 +5,6 @@
 @tailwind utilities;
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-  
   body {
     @apply bg-cream-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300;
     font-feature-settings: "rlig" 1, "calt" 1;
