@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Users, GraduationCap, MapPin } from 'lucide-react'
+import { GraduationCap, MapPin } from 'lucide-react'
 import SectionTitle from '../common/SectionTitle'
 import Card from '../ui/Card'
 import { researchTeam, universityInfo } from '@/data/teamData'
