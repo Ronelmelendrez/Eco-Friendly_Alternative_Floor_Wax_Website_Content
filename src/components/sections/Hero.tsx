@@ -2,7 +2,6 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { ArrowRight, FlaskConical, Leaf, BarChart } from 'lucide-react'
 import Button from '../ui/Button'
-import { researchData } from '@/data/researchData'
 import { frictionData, shininessData } from '@/data/chartData'
 
 const Hero: React.FC = () => {
