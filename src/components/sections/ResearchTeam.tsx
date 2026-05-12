@@ -3,12 +3,31 @@ import { motion } from 'framer-motion'
 import { GraduationCap, MapPin } from 'lucide-react'
 import SectionTitle from '../common/SectionTitle'
 import Card from '../ui/Card'
+import { AnimatedBlob } from '../common/BackgroundElements'
 import { researchTeam, universityInfo } from '@/data/teamData'
 
 const ResearchTeam: React.FC = () => {
   return (
-    <section id="team" className="py-20 bg-white/50 dark:bg-gray-900/30">
-      <div className="container mx-auto px-4 md:px-6">
+    <section id="team" className="relative py-20 bg-gradient-modern overflow-hidden">
+      {/* Modern Background Elements */}
+      <div className="absolute inset-0 overflow-hidden -z-10">
+        <AnimatedBlob
+          color="rgba(244, 208, 63, 0.08)"
+          size="lg"
+          position={{ top: '50%', left: '-150px' }}
+          duration={25}
+          delay={0}
+        />
+        <AnimatedBlob
+          color="rgba(45, 90, 39, 0.06)"
+          size="md"
+          position={{ top: '-80px', right: '5%' }}
+          duration={29}
+          delay={4}
+        />
+      </div>
+
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <SectionTitle 
           title="Research Team" 
           subtitle="The researchers behind this capstone project"

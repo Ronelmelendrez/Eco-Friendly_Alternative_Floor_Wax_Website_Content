@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { Beaker, FlaskConical, TestTube, Gauge, Sun, BarChart, Leaf, Droplet } from 'lucide-react'
 import SectionTitle from '../common/SectionTitle'
 import Card from '../ui/Card'
+import { AnimatedBlob } from '../common/BackgroundElements'
 import { methodologySteps } from '@/data/methodologyData'
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -18,8 +19,26 @@ const iconMap: Record<string, React.ReactNode> = {
 
 const Methodology: React.FC = () => {
   return (
-    <section id="methodology" className="py-20 bg-white/50 dark:bg-gray-900/30">
-      <div className="container mx-auto px-4 md:px-6">
+    <section id="methodology" className="relative py-20 bg-gradient-modern overflow-hidden">
+      {/* Modern Background Elements */}
+      <div className="absolute inset-0 overflow-hidden -z-10">
+        <AnimatedBlob
+          color="rgba(244, 208, 63, 0.08)"
+          size="lg"
+          position={{ top: '-100px', right: '-100px' }}
+          duration={28}
+          delay={0}
+        />
+        <AnimatedBlob
+          color="rgba(45, 90, 39, 0.08)"
+          size="md"
+          position={{ bottom: '-80px', left: '5%' }}
+          duration={32}
+          delay={3}
+        />
+      </div>
+
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <SectionTitle 
           title="Research Methodology" 
           subtitle="A systematic approach to developing and testing the alternative floor wax"

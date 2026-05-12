@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { Users, Building2, Sprout, Microscope } from 'lucide-react'
 import SectionTitle from '../common/SectionTitle'
 import Card from '../ui/Card'
+import { AnimatedBlob } from '../common/BackgroundElements'
 
 const Recommendations: React.FC = () => {
   const recommendations = [
@@ -29,8 +30,26 @@ const Recommendations: React.FC = () => {
   ]
   
   return (
-    <section id="recommendations" className="py-20">
-      <div className="container mx-auto px-4 md:px-6">
+    <section id="recommendations" className="relative py-20 bg-gradient-modern overflow-hidden">
+      {/* Modern Background Elements */}
+      <div className="absolute inset-0 overflow-hidden -z-10">
+        <AnimatedBlob
+          color="rgba(45, 90, 39, 0.08)"
+          size="lg"
+          position={{ top: '-100px', left: '-100px' }}
+          duration={27}
+          delay={1}
+        />
+        <AnimatedBlob
+          color="rgba(92, 58, 33, 0.08)"
+          size="md"
+          position={{ bottom: '-80px', right: '5%' }}
+          duration={31}
+          delay={3}
+        />
+      </div>
+
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <SectionTitle 
           title="Recommendations" 
           subtitle="Practical applications and directions for future work"

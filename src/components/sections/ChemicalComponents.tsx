@@ -4,6 +4,7 @@ import { Droplet, Apple, CheckCircle } from 'lucide-react'
 import SectionTitle from '../common/SectionTitle'
 import Card from '../ui/Card'
 import Badge from '../ui/Badge'
+import { AnimatedBlob } from '../common/BackgroundElements'
 
 const ChemicalComponents: React.FC = () => {
   const components = [
@@ -34,8 +35,26 @@ const ChemicalComponents: React.FC = () => {
   }
   
   return (
-    <section id="ingredients" className="py-20">
-      <div className="container mx-auto px-4 md:px-6">
+    <section id="ingredients" className="relative py-20 bg-gradient-modern overflow-hidden">
+      {/* Modern Background Elements */}
+      <div className="absolute inset-0 overflow-hidden -z-10">
+        <AnimatedBlob
+          color="rgba(92, 58, 33, 0.08)"
+          size="lg"
+          position={{ top: '-100px', left: '-100px' }}
+          duration={27}
+          delay={0}
+        />
+        <AnimatedBlob
+          color="rgba(45, 90, 39, 0.08)"
+          size="md"
+          position={{ bottom: '-80px', right: '5%' }}
+          duration={31}
+          delay={2}
+        />
+      </div>
+
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <SectionTitle 
           title="Ingredients & Chemical Components" 
           subtitle="Natural compounds that make this alternative floor wax effective"

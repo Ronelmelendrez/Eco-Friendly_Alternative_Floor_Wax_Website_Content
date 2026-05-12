@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { CheckCircle2, Lightbulb } from 'lucide-react'
 import SectionTitle from '../common/SectionTitle'
 import Card from '../ui/Card'
+import { AnimatedBlob } from '../common/BackgroundElements'
 
 const Conclusions: React.FC = () => {
   const conclusions = [
@@ -14,8 +15,26 @@ const Conclusions: React.FC = () => {
   ]
   
   return (
-    <section id="conclusions" className="py-20 bg-gradient-to-br from-cream-white to-cream-dark dark:from-gray-900 dark:to-gray-800">
-      <div className="container mx-auto px-4 md:px-6">
+    <section id="conclusions" className="relative py-20 bg-gradient-modern overflow-hidden">
+      {/* Modern Background Elements */}
+      <div className="absolute inset-0 overflow-hidden -z-10">
+        <AnimatedBlob
+          color="rgba(92, 58, 33, 0.1)"
+          size="xl"
+          position={{ top: '-200px', right: '-150px' }}
+          duration={24}
+          delay={1}
+        />
+        <AnimatedBlob
+          color="rgba(244, 208, 63, 0.08)"
+          size="lg"
+          position={{ bottom: '-120px', left: '-100px' }}
+          duration={28}
+          delay={2}
+        />
+      </div>
+
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <SectionTitle 
           title="Conclusions" 
           subtitle="Key findings derived from the research analysis"

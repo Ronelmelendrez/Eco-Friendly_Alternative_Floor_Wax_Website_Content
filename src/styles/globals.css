@@ -23,4 +23,47 @@
   .text-gradient {
     @apply bg-gradient-to-r from-coconut-brown to-forest-green bg-clip-text text-transparent;
   }
+
+  /* Modern background utilities */
+  .bg-gradient-modern {
+    @apply bg-gradient-to-br from-cream-white via-cream-dark to-cream-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900;
+  }
+
+  .bg-mesh-gradient {
+    background: linear-gradient(135deg, #5C3A21 0%, #2D5A27 50%, #F4D03F 100%);
+  }
+
+  .dark .bg-mesh-gradient {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d3748 50%, #2D5A27 100%);
+  }
+
+  .backdrop-blur-sm-subtle {
+    @apply backdrop-blur-sm opacity-95;
+  }
+
+  .glow-effect {
+    box-shadow: 0 0 40px rgba(92, 58, 33, 0.1), 0 0 60px rgba(45, 90, 39, 0.05);
+  }
+
+  .dark .glow-effect {
+    box-shadow: 0 0 40px rgba(244, 208, 63, 0.05), 0 0 60px rgba(93, 58, 33, 0.1);
+  }
+
+  .section-pattern {
+    position: relative;
+    background-attachment: fixed;
+    background-size: 400px 400px;
+  }
+
+  .section-pattern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(92, 58, 33, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(45, 90, 39, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+  }
 }

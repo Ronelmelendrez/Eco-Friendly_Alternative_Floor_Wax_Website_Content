@@ -3,12 +3,31 @@ import { motion } from 'framer-motion'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Cell } from 'recharts'
 import SectionTitle from '../common/SectionTitle'
 import Card from '../ui/Card'
+import { AnimatedBlob } from '../common/BackgroundElements'
 import { frictionData, shininessData, tTestResults, frictionTrials, shininessTrials } from '@/data/chartData'
 
 const ResultsDashboard: React.FC = () => {
   return (
-    <section id="results" className="py-20">
-      <div className="container mx-auto px-4 md:px-6">
+    <section id="results" className="relative py-20 bg-gradient-modern overflow-hidden">
+      {/* Modern Background Elements */}
+      <div className="absolute inset-0 overflow-hidden -z-10">
+        <AnimatedBlob
+          color="rgba(92, 58, 33, 0.08)"
+          size="lg"
+          position={{ top: '50%', right: '-150px' }}
+          duration={26}
+          delay={1}
+        />
+        <AnimatedBlob
+          color="rgba(244, 208, 63, 0.06)"
+          size="md"
+          position={{ bottom: '-100px', left: '-100px' }}
+          duration={30}
+          delay={2}
+        />
+      </div>
+
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <SectionTitle 
           title="Results Dashboard" 
           subtitle="Statistical analysis and performance comparison with commercial floor wax"

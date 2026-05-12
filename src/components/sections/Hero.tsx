@@ -2,19 +2,59 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { ArrowRight, FlaskConical, Leaf, BarChart } from 'lucide-react'
 import Button from '../ui/Button'
+import { AnimatedBlob, GradientMesh, OrbitingParticles } from '../common/BackgroundElements'
 import { frictionData, shininessData } from '@/data/chartData'
 
 const Hero: React.FC = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-cream-white via-cream-dark to-coconut-brown/10 dark:from-gray-900 dark:via-gray-800 dark:to-forest-green/20" />
-      
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-soft-yellow/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-forest-green/20 rounded-full blur-3xl animate-pulse delay-1000" />
+      {/* Background Gradient Mesh */}
+      <div className="absolute inset-0">
+        <GradientMesh 
+          colors={['#5C3A21', '#2D5A27', '#F4D03F']} 
+          opacity={0.4}
+        />
       </div>
+
+      {/* Dynamic Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Animated Blobs */}
+        <AnimatedBlob
+          color="rgba(244, 208, 63, 0.15)"
+          size="xl"
+          position={{ top: '-200px', right: '-200px' }}
+          duration={25}
+          delay={0}
+        />
+        <AnimatedBlob
+          color="rgba(45, 90, 39, 0.12)"
+          size="lg"
+          position={{ bottom: '-150px', left: '-150px' }}
+          duration={30}
+          delay={2}
+        />
+        <AnimatedBlob
+          color="rgba(92, 58, 33, 0.1)"
+          size="md"
+          position={{ top: '50%', left: '10%' }}
+          duration={22}
+          delay={4}
+        />
+
+        {/* Orbiting Particles */}
+        <div className="absolute top-1/3 right-1/4">
+          <OrbitingParticles
+            count={12}
+            radius={150}
+            duration={40}
+            particleSize={2}
+            color="rgba(92, 58, 33, 0.4)"
+          />
+        </div>
+      </div>
+
+      {/* Enhanced Background Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-cream-white/30 dark:to-gray-900/40" />
       
       <div className="container mx-auto px-4 md:px-6 py-20 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
