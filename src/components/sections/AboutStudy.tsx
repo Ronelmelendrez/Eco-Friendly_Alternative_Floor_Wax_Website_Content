@@ -75,7 +75,7 @@ const AboutStudy: React.FC = () => {
           >
             <Card hover={true} className="h-full group bg-gradient-to-br from-white/50 to-white/30 dark:from-gray-800/50 dark:to-gray-800/30">
               <div className="flex items-start justify-between mb-4">
-                <h3 className="text-xl font-bold text-coconut-brown dark:text-cream-white">Background of the Study</h3>
+                <h3 className="text-2xl md:text-3xl font-display font-bold tracking-tight text-coconut-brown dark:text-cream-white">Background of the Study</h3>
                 <motion.div
                   whileHover={{ rotate: 90 }}
                   transition={{ type: 'spring', stiffness: 200 }}
@@ -84,7 +84,7 @@ const AboutStudy: React.FC = () => {
                 </motion.div>
               </div>
               <div className="w-12 h-1 bg-gradient-to-r from-coconut-brown to-forest-green rounded-full mb-4" />
-              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+              <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed font-light">
                 {researchData.background}
               </p>
             </Card>
@@ -100,7 +100,7 @@ const AboutStudy: React.FC = () => {
           >
             <Card hover={true} className="h-full group bg-gradient-to-br from-white/50 to-white/30 dark:from-gray-800/50 dark:to-gray-800/30">
               <div className="flex items-start justify-between mb-4">
-                <h3 className="text-xl font-bold text-coconut-brown dark:text-cream-white">Statement of the Problem</h3>
+                <h3 className="text-2xl md:text-3xl font-display font-bold tracking-tight text-coconut-brown dark:text-cream-white">Statement of the Problem</h3>
                 <motion.div
                   whileHover={{ rotate: 90 }}
                   transition={{ type: 'spring', stiffness: 200 }}
@@ -109,7 +109,7 @@ const AboutStudy: React.FC = () => {
                 </motion.div>
               </div>
               <div className="w-12 h-1 bg-gradient-to-r from-forest-green to-soft-yellow rounded-full mb-4" />
-              <p className="text-gray-600 dark:text-gray-300 leading-relaxed whitespace-pre-line">
+              <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed font-light whitespace-pre-line">
                 {researchData.problem}
               </p>
             </Card>
@@ -134,7 +134,7 @@ const AboutStudy: React.FC = () => {
                 >
                   <Target size={24} className="text-coconut-brown" />
                 </motion.div>
-                <h3 className="text-2xl font-bold text-coconut-brown dark:text-cream-white">Objectives of the Study</h3>
+                <h3 className="text-2xl md:text-3xl font-display font-bold tracking-tight text-coconut-brown dark:text-cream-white">Objectives of the Study</h3>
               </div>
 
               {/* General Objective */}
@@ -144,14 +144,14 @@ const AboutStudy: React.FC = () => {
                 className="p-6 bg-gradient-to-r from-coconut-brown/10 via-transparent to-transparent dark:from-coconut-brown/5 rounded-xl border-l-4 border-coconut-brown"
               >
                 <Badge variant="info">General Objective</Badge>
-                <p className="text-gray-600 dark:text-gray-300 mt-3 font-medium">
+                <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 mt-3 font-medium leading-relaxed">
                   To determine the feasibility of Coconut Oil with Cardava Banana Peel as an alternative floor wax.
                 </p>
               </motion.div>
 
               {/* Specific Objectives */}
               <div>
-                <p className="font-semibold text-forest-green mb-4 flex items-center gap-2">
+                <p className="text-lg font-display font-semibold text-forest-green mb-4 flex items-center gap-2 tracking-wide">
                   <motion.span
                     animate={{ rotate: [0, 360] }}
                     transition={{ duration: 20, repeat: Infinity }}
@@ -170,12 +170,12 @@ const AboutStudy: React.FC = () => {
                   {researchData.objectives.map((obj, idx) => (
                     <motion.li key={idx} variants={item} className="flex items-start gap-3 group">
                       <motion.span
-                        className="text-forest-green mt-1 font-bold flex-shrink-0"
+                        className="text-forest-green mt-1 font-bold flex-shrink-0 text-lg"
                         whileHover={{ scale: 1.3 }}
                       >
                         {idx + 1}.
                       </motion.span>
-                      <span className="text-gray-600 dark:text-gray-300 group-hover:text-forest-green transition-colors">
+                      <span className="text-base text-gray-600 dark:text-gray-300 group-hover:text-forest-green transition-colors leading-relaxed font-light">
                         {obj}
                       </span>
                     </motion.li>
@@ -202,7 +202,7 @@ const AboutStudy: React.FC = () => {
                 >
                   <Lightbulb size={24} className="text-soft-yellow" />
                 </motion.div>
-                <h3 className="text-2xl font-bold text-coconut-brown dark:text-cream-white">Research Hypothesis</h3>
+                <h3 className="text-2xl md:text-3xl font-display font-bold tracking-tight text-coconut-brown dark:text-cream-white">Research Hypothesis</h3>
               </div>
 
               {/* Null Hypothesis */}
@@ -212,10 +212,10 @@ const AboutStudy: React.FC = () => {
                 className="p-6 bg-gradient-to-br from-blue-50 to-blue-50/30 dark:from-blue-900/20 dark:to-blue-900/10 rounded-xl border border-blue-200 dark:border-blue-800/30"
               >
                 <div className="flex items-center gap-2 mb-3">
-                  <span className="px-3 py-1 bg-blue-500 text-white text-xs font-bold rounded-full">H₀</span>
-                  <p className="font-semibold text-blue-900 dark:text-blue-100">Null Hypothesis</p>
+                  <span className="px-3 py-1 bg-blue-500 text-white text-xs font-bold rounded-full tracking-wider">H₀</span>
+                  <p className="font-display font-semibold text-blue-900 dark:text-blue-100 tracking-tight">Null Hypothesis</p>
                 </div>
-                <p className="text-gray-700 dark:text-gray-300 leading-relaxed italic">
+                <p className="text-base text-gray-700 dark:text-gray-300 leading-relaxed italic font-light">
                   "{researchData.hypothesis.null}"
                 </p>
               </motion.div>
@@ -227,10 +227,10 @@ const AboutStudy: React.FC = () => {
                 className="p-6 bg-gradient-to-br from-green-50 to-green-50/30 dark:from-green-900/20 dark:to-green-900/10 rounded-xl border border-green-200 dark:border-green-800/30"
               >
                 <div className="flex items-center gap-2 mb-3">
-                  <span className="px-3 py-1 bg-forest-green text-white text-xs font-bold rounded-full">📊</span>
-                  <p className="font-semibold text-green-900 dark:text-green-100">Interpretation</p>
+                  <span className="px-3 py-1 bg-forest-green text-white text-xs font-bold rounded-full tracking-wider">📊</span>
+                  <p className="font-display font-semibold text-green-900 dark:text-green-100 tracking-tight">Interpretation</p>
                 </div>
-                <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p className="text-base text-gray-700 dark:text-gray-300 leading-relaxed font-light">
                   {researchData.hypothesis.interpretation}
                 </p>
               </motion.div>
@@ -256,7 +256,7 @@ const AboutStudy: React.FC = () => {
                 >
                   <Shield size={24} className="text-coconut-brown" />
                 </motion.div>
-                <h3 className="text-2xl font-bold text-coconut-brown dark:text-cream-white">Significance of the Study</h3>
+                <h3 className="text-2xl md:text-3xl font-display font-bold tracking-tight text-coconut-brown dark:text-cream-white">Significance of the Study</h3>
               </div>
 
               <motion.ul
@@ -279,7 +279,7 @@ const AboutStudy: React.FC = () => {
                     >
                       <CheckCircle className="w-5 h-5 text-forest-green" />
                     </motion.div>
-                    <span className="text-gray-600 dark:text-gray-300 group-hover:text-coconut-brown dark:group-hover:text-cream-white transition-colors">
+                    <span className="text-base text-gray-600 dark:text-gray-300 group-hover:text-coconut-brown dark:group-hover:text-cream-white transition-colors leading-relaxed font-light">
                       {significanceItem}
                     </span>
                   </motion.li>
@@ -305,7 +305,7 @@ const AboutStudy: React.FC = () => {
                 >
                   <AlertCircle size={24} className="text-soft-yellow" />
                 </motion.div>
-                <h3 className="text-2xl font-bold text-coconut-brown dark:text-cream-white">Scope & Limitations</h3>
+                <h3 className="text-2xl md:text-3xl font-display font-bold tracking-tight text-coconut-brown dark:text-cream-white">Scope & Limitations</h3>
               </div>
 
               {/* Scope Card */}
@@ -314,11 +314,11 @@ const AboutStudy: React.FC = () => {
                 transition={{ type: 'spring', stiffness: 300 }}
                 className="p-5 bg-gradient-to-br from-purple-50 to-purple-50/30 dark:from-purple-900/20 dark:to-purple-900/10 rounded-xl border-l-4 border-purple-400 dark:border-purple-600"
               >
-                <p className="font-semibold text-purple-900 dark:text-purple-100 mb-3 flex items-center gap-2">
+                <p className="font-display font-semibold text-purple-900 dark:text-purple-100 mb-3 flex items-center gap-2 tracking-tight">
                   <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
                   Scope
                 </p>
-                <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+                <p className="text-base text-gray-700 dark:text-gray-300 text-sm leading-relaxed font-light">
                   {researchData.scope}
                 </p>
               </motion.div>
@@ -329,11 +329,11 @@ const AboutStudy: React.FC = () => {
                 transition={{ type: 'spring', stiffness: 300 }}
                 className="p-5 bg-gradient-to-br from-orange-50 to-orange-50/30 dark:from-orange-900/20 dark:to-orange-900/10 rounded-xl border-l-4 border-orange-400 dark:border-orange-600"
               >
-                <p className="font-semibold text-orange-900 dark:text-orange-100 mb-3 flex items-center gap-2">
+                <p className="font-display font-semibold text-orange-900 dark:text-orange-100 mb-3 flex items-center gap-2 tracking-tight">
                   <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
                   Limitations
                 </p>
-                <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+                <p className="text-base text-gray-700 dark:text-gray-300 text-sm leading-relaxed font-light">
                   {researchData.limitations}
                 </p>
               </motion.div>
@@ -346,8 +346,8 @@ const AboutStudy: React.FC = () => {
                 <div className="flex items-center gap-3 text-forest-green dark:text-soft-yellow">
                   <MapPin className="w-5 h-5 flex-shrink-0" />
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wide opacity-75">Research Locale</p>
-                    <p className="text-sm font-medium">{researchData.locale}</p>
+                    <p className="text-xs font-display font-semibold uppercase tracking-widest opacity-75">Research Locale</p>
+                    <p className="text-base font-medium">{researchData.locale}</p>
                   </div>
                 </div>
               </motion.div>
