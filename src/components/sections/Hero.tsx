@@ -65,7 +65,7 @@ const Hero: React.FC = () => {
           >
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm font-medium text-coconut-brown dark:text-cream-white mb-6">
               <FlaskConical size={16} />
-              Capstone Research Project 2024
+              Capstone Research Project
             </span>
           </motion.div>
           
