@@ -40,7 +40,7 @@ const AboutPage: React.FC = () => {
                 {references.map((ref, idx) => (
                   <li key={idx} className="border-b border-gray-200 dark:border-gray-700 pb-2 last:border-0">
                     <p className="text-gray-700 dark:text-gray-300">
-                      <span className="font-medium">{ref.authors}</span> ({ref.year}). <span className="italic">{ref.title}</span>. {ref.type}.
+                      <span className="font-medium">{ref.authors}</span> ({ref.year}). <span className="italic">{ref.title}</span>. {ref.source}.
                     </p>
                   </li>
                 ))}

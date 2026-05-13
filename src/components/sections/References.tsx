@@ -110,7 +110,7 @@ const References: React.FC = () => {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="mb-12 flex flex-wrap gap-2 justify-center"
         >
-          {referenceCategories.map((category, idx) => (
+          {referenceCategories.map((category) => (
             <motion.button
               key={category.name}
               onClick={() => setSelectedCategory(category.name)}
