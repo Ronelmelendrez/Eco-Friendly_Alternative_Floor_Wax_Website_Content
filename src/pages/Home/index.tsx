@@ -6,6 +6,7 @@ import Methodology from '@/components/sections/Methodology'
 import ResultsDashboard from '@/components/sections/ResultsDashboard'
 import Conclusions from '@/components/sections/Conclusions'
 import Recommendations from '@/components/sections/Recommendations'
+import References from '@/components/sections/References'
 import ResearchTeam from '@/components/sections/ResearchTeam'
 
 const Home: React.FC = () => {
@@ -18,6 +19,7 @@ const Home: React.FC = () => {
       <ResultsDashboard />
       <Conclusions />
       <Recommendations />
+      <References />
       <ResearchTeam />
     </>
   )

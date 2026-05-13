@@ -9,7 +9,8 @@ export const footerLinks = {
   research: [
     { name: "Methodology", href: "/#methodology" },
     { name: "Results Dashboard", href: "/results" },
-    { name: "Conclusions", href: "/#conclusions" }
+    { name: "Conclusions", href: "/#conclusions" },
+    { name: "References", href: "/#references" }
   ],
   team: [
     { name: "Research Team", href: "/about" },
